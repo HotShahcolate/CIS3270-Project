@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="345.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneBuilder.controller2">
+   <children>
+      <ImageView fitHeight="450.0" fitWidth="605.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="https://imgur.com/q1LXGbM.png" />
+         </image>
+      </ImageView>
+   </children>
+</StackPane>
