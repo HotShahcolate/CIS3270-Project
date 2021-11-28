@@ -12,16 +12,16 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-public class controller implements Initializable{
-	private Scene login;
+public class controller3 implements Initializable{
+	private Scene signup_cont;
 	 
 	 public void setLogin (Scene scene) {
-		 login = scene;
+		 signup_cont = scene;
 	 }
 	 
-	 public void openLogin(MouseEvent event) {
-	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-	        stage.setScene(login);
+	 public void openSignUpCont(ActionEvent actionEvent) {
+	        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+	        stage.setScene(signup_cont);
 	    }
 	
 	@Override

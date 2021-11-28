@@ -12,13 +12,17 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 public class controller2 implements Initializable{
-	 @FXML private Button Login;
+	 @FXML private Button Signup;
 	 
 	 private Scene signup;
 	 
+	 public void setSignUpScene (Scene scene) {
+		 signup = scene;
+	 }
+	 
 	 public void openSignUp(ActionEvent actionEvent) {
 	        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-	        Login.setOnAction(e -> stage.setScene(signup));
+	        stage.setScene(signup);
 	    }
 	 
 	 

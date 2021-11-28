@@ -14,7 +14,7 @@
             <TextField promptText="Username" />
             <PasswordField promptText="Password" />
             <Button fx:id="Login" mnemonicParsing="false" prefHeight="8.0" prefWidth="207.0" text="Login" textAlignment="CENTER" />
-            <Button fx:id="Signup" mnemonicParsing="false" prefHeight="25.0" prefWidth="207.0" text="Sign Up" />
+            <Button fx:id="Signup" mnemonicParsing="false" onAction="#openSignUp" prefHeight="25.0" prefWidth="207.0" text="Sign Up" />
             <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have An Account?" />
          </children>
       </VBox>
