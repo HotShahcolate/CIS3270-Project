@@ -1,34 +1,41 @@
 package SceneBuilder;
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.layout.BorderPane;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.paint.*;
-import javafx.scene.layout.StackPane;
-import javafx.scene.image.ImageView;
-import javafx.scene.image.Image;
-import javafx.scene.layout.BackgroundImage;
-import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
+import javafx.beans.binding.Bindings; 
 
 
 
 public class application extends Application {
 	@Override
-	public void start(Stage primaryStage) {
-		try {
-			BorderPane root_Login = (BorderPane)FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
-			Scene scene_Login = new Scene(root_Login,600,325, Color.WHITE);
-			scene_Login.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+	public void start(Stage primaryStage) throws Exception{
+	
+			FXMLLoader load_Login = FXMLLoader.load(getClass().getResource("LoginPage.fxml"));
+			Parent root_Login = load_Login.load();
+			Scene scene_Login = new Scene(root_Login);
 			
-			StackPane root_Splash = (StackPane)FXMLLoader.load(getClass().getResource("SplashScreen.fxml"));
-			Scene scene_Splash = new Scene(root_Splash,600,325, Color.WHITE);
-			scene_Splash.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			
+			FXMLLoader Splash_Load = FXMLLoader.load(getClass().getResource("SplashScreen.fxml"));
+			Parent root_Splash = Splash_Load.load();
+			Scene scene_Splash = new Scene(root_Splash);
+			
+			
+			FXMLLoader load_Signup = FXMLLoader.load(getClass().getResource("Sign Up Page.fxml"));
+			Parent root_Signup = load_Signup.load();
+			Scene scene_Signup = new Scene(root_Signup);
+			
+			controller2 signupLoader = (controller2)load_Login.getController();
+			
+			
 			
 			primaryStage.setScene(scene_Splash);
 			primaryStage.show();
+			
 			
 			scene_Splash.setOnMousePressed(new EventHandler<MouseEvent>() {
 		        @Override
@@ -37,9 +44,9 @@ public class application extends Application {
 		        }
 		    });
 			
-		} catch(Exception e) {
-			e.printStackTrace();
-		}
+			
+			
+		
 	}
 	
 	
