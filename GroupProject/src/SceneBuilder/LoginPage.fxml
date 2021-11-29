@@ -3,20 +3,32 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneBuilder.controller2">
    <children>
-      <VBox layoutX="200.0" layoutY="73.0" prefHeight="255.0" prefWidth="200.0" spacing="10.0">
+      <ImageView fx:id="login_image" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="https://imgur.com/JSE1lGy.png" />
+         </image>
+      </ImageView>
+      <VBox fx:id="login_box" layoutX="200.0" layoutY="112.0" prefHeight="176.0" prefWidth="200.0" spacing="10.0">
          <children>
             <TextField promptText="Username" />
             <PasswordField promptText="Password" />
             <Button fx:id="Login" mnemonicParsing="false" prefHeight="8.0" prefWidth="207.0" text="Login" textAlignment="CENTER" />
-            <Button fx:id="Signup" mnemonicParsing="false" onAction="#openSignUp" prefHeight="25.0" prefWidth="207.0" text="Sign Up" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have An Account?" />
+            <Text onMouseClicked="#openSignUp" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have An Account? Signup" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Your Password?" />
          </children>
       </VBox>
+      <VBox fx:id="login_box1" layoutX="399.0" prefHeight="400.0" prefWidth="200.0" />
+      <HBox fx:id="login_box2" layoutX="200.0" prefHeight="114.0" prefWidth="200.0" />
+      <VBox fx:id="login_box3" prefHeight="400.0" prefWidth="200.0" />
+      <HBox fx:id="login_box4" layoutX="190.0" layoutY="286.0" prefHeight="114.0" prefWidth="220.0" />
    </children>
 </Pane>
