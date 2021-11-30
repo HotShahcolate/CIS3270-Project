@@ -27,10 +27,10 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
                   <PasswordField prefHeight="25.0" prefWidth="287.0" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question 1" />
-                  <ChoiceBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="287.0" />
+                  <ChoiceBox fx:id="choice1" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="287.0" />
                   <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="289.0" />
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question 2" />
-                  <ChoiceBox prefHeight="25.0" prefWidth="287.0" />
+                  <ChoiceBox fx:id="choice2" prefHeight="25.0" prefWidth="287.0" />
                   <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="285.0" />
                   <Button mnemonicParsing="false" text="Sign Up" />
                </children>
