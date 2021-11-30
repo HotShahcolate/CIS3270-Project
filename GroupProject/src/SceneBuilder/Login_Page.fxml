@@ -25,7 +25,7 @@
                   <PasswordField prefHeight="25.0" prefWidth="241.0" promptText="Password" />
                   <Button fx:id="Login" mnemonicParsing="false" prefHeight="8.0" prefWidth="207.0" text="Login" textAlignment="CENTER" />
                   <Text onMouseClicked="#openSignUp" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have An Account? Signup" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Your Password?" />
+                  <Text onMouseClicked="#openForgetPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Your Password?" />
                </children>
             </VBox>
          </children>

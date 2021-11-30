@@ -44,10 +44,17 @@ public class application extends Application {
 			root_Signup_Cont.prefWidthProperty().bind(root_Signup_Cont.widthProperty());
 			root_Signup_Cont.prefHeightProperty().bind(root_Signup_Cont.heightProperty());
 			
+			FXMLLoader load_Forget = new FXMLLoader(getClass().getResource("Forget_Password.fxml"));
+			Pane root_Forget = load_Forget.load();
+			Scene scene_Forget = new Scene(root_Forget,600,400);
+			root_Forget.prefWidthProperty().bind(root_Forget.widthProperty());
+			root_Forget.prefHeightProperty().bind(root_Forget.heightProperty());
+			
 			controller2 signupLoader = (controller2)load_Login.getController();
 			signupLoader.setSignUpScene(scene_Signup);
 			signupLoader.setImage(root_Login);
 			signupLoader.setStack(root_Login);
+			signupLoader.setForgetPassword(scene_Forget);
 			
 			
 			controller loginLoader = (controller)Splash_Load.getController();
@@ -62,6 +69,15 @@ public class application extends Application {
 			controller4 signupCont = (controller4)load_Signup_Cont.getController();
 			signupCont.setBox(root_Signup_Cont);
 			signupCont.setImage(root_Signup_Cont);
+			signupCont.choiceBox1();
+			signupCont.choiceBox2();
+			
+			controller5 forgetPassword = (controller5)load_Forget.getController();
+			forgetPassword.setBox(root_Forget);
+			forgetPassword.setImage(root_Forget);
+			forgetPassword.choiceBox1();
+			forgetPassword.choiceBox2();
+			forgetPassword.setLogin(scene_Login);
 			
 			
 			primaryStage.setScene(scene_Splash);
