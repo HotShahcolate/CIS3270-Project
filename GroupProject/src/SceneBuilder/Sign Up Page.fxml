@@ -2,26 +2,39 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
+
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneBuilder.controller3">
    <children>
-      <VBox layoutX="158.0" layoutY="44.0" prefHeight="313.0" prefWidth="285.0" spacing="5.0">
+      <ImageView fx:id="signup_image" fitHeight="400.0" fitWidth="600.0" pickOnBounds="true">
+         <image>
+            <Image url="https://imgur.com/RklvwEU.png" />
+         </image>
+      </ImageView>
+      <StackPane fx:id="signup_box" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="284.13671875" />
-            <TextField />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
-            <TextField />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emai Address" />
-            <TextField />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address" />
-            <TextField />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zipcode" />
-            <TextField />
-            <Button mnemonicParsing="false" onAction="#openSignUpCont" text="Continue" />
+            <VBox fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="325.0" prefWidth="257.0" spacing="10.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="First Name" wrappingWidth="284.13671875" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="287.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Last Name" />
+                  <TextField prefHeight="25.0" prefWidth="287.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Emai Address" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="299.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Street Address" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="287.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Zipcode" />
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="306.0" />
+                  <Button maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#openSignUpCont" prefHeight="25.0" prefWidth="79.0" text="Continue" textFill="#282827" />
+               </children>
+            </VBox>
          </children>
-      </VBox>
+      </StackPane>
    </children>
 </Pane>
