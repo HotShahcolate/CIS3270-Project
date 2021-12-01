@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" onMouseClicked="#openLogin" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SceneBuilder.controller">
+   <children>
+      <ImageView fx:id="splash" fitHeight="400.0" fitWidth="600.0" layoutY="-1.0" onMouseClicked="#openLogin" pickOnBounds="true">
+         <image>
+            <Image url="https://imgur.com/HNwaK2I.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
