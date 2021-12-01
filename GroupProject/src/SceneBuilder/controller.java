@@ -27,7 +27,7 @@ public class controller implements Initializable{
 		 login = scene;
 	 }
 	 
-	 public void openLogin(MouseEvent event) {
+	 public void openLogin(ActionEvent event) {
 	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	        stage.setScene(login);
 	    }

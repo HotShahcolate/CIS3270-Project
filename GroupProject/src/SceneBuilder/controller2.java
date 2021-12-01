@@ -21,6 +21,7 @@ import javafx.fxml.Initializable;
 public class controller2 implements Initializable{
 	 private Scene signup;
 	 private Scene forgetPassword;
+	 private Scene main;
 	 @FXML private ImageView login_image;
 	 @FXML private StackPane stack_pane;
 	
@@ -52,6 +53,15 @@ public class controller2 implements Initializable{
 	 public void openForgetPassword(MouseEvent event) {
 	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	        stage.setScene(forgetPassword);
+	    }
+	 
+	 public void setMain (Scene scene3) {
+		 main = scene3;
+	 }
+	 
+	 public void openMain(ActionEvent actionEvent) {
+	        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+	        stage.setScene(main);
 	    }
 	 
 	 

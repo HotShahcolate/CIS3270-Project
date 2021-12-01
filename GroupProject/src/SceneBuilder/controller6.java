@@ -14,27 +14,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
-public class controller5 implements Initializable{
+public class controller6 implements Initializable{
 	 @FXML private ImageView image;
 	 @FXML private StackPane stack_pane;
-	 @FXML private ComboBox<String> choice1;
-	 @FXML private ComboBox<String> choice2;
 	 
-	 private Scene login;
-	 
-	 
-	 public void comboBox1 () {
-		 choice1.getItems().addAll ("What is your mom's maiden name?", "What is your first pet's name?", 
-				 "What is the name of your high school?");
-	 }
-	 
-	 public void comboBox2 () {
-		 choice2.getItems().addAll ("What was the first company that you worked for?", 
-				 "What is the name of your favorite restaurant", 
-				 "What is the name of your middle school");
-	 }
-	 
-	
 	 public void setImage (Pane root) {
 			image.fitWidthProperty().bind(root.widthProperty());
 			image.fitHeightProperty().bind(root.heightProperty());
@@ -45,17 +28,6 @@ public class controller5 implements Initializable{
 			stack_pane.prefHeightProperty().bind(root.heightProperty());
 		}
 	 
-	 public void setLogin (Scene scene) {
-		 login = scene;
-	 }
-	 
-	 public void openLogin(ActionEvent actionEvent) {
-	        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
-	        stage.setScene(login);
-	    }
-	 
-	 
-	
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
         
