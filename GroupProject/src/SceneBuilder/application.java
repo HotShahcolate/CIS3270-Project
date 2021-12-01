@@ -17,6 +17,7 @@ import javafx.beans.binding.Bindings;
 public class application extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
+		//Test
 			System.out.testasdf asd as asd sa
 			FXMLLoader load_Login = new FXMLLoader(getClass().getResource("Login_Page.fxml"));
 			Pane root_Login = load_Login.load();
