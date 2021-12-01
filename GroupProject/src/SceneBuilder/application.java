@@ -16,12 +16,7 @@ import javafx.beans.binding.Bindings;
 public class application extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
-<<<<<<< HEAD
-		//Testt
-			
-=======
-		
->>>>>>> branch 'master' of https://github.com/HotShahcolate/CIS3270-Project.git
+			//this is a test
 			FXMLLoader load_Login = new FXMLLoader(getClass().getResource("Login_Page.fxml"));
 			Pane root_Login = load_Login.load();
 			Scene scene_Login = new Scene(root_Login,600,400);
