@@ -18,6 +18,7 @@ public class application extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
 			//test
+		//test2
 			FXMLLoader load_Login = new FXMLLoader(getClass().getResource("Login_Page.fxml"));
 			Pane root_Login = load_Login.load();
 			Scene scene_Login = new Scene(root_Login,600,400);
