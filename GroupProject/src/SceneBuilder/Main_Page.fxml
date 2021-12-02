@@ -24,7 +24,7 @@
                <children>
                   <HBox alignment="CENTER_RIGHT" layoutX="377.0" layoutY="14.0" prefHeight="29.0" prefWidth="209.0">
                      <children>
-                        <Text fill="#ff9b0f" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Trips">
+                        <Text fx:id="your_trip" fill="#ff9b0f" onMouseClicked="#openProfile" strokeType="OUTSIDE" strokeWidth="0.0" text="Your Trips">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>

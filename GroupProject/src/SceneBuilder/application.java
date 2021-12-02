@@ -16,7 +16,7 @@ import javafx.beans.binding.Bindings;
 public class application extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
-		
+		try {
 			FXMLLoader load_Login = new FXMLLoader(getClass().getResource("Login_Page.fxml"));
 			Pane root_Login = load_Login.load();
 			Scene scene_Login = new Scene(root_Login,600,400);
@@ -55,6 +55,12 @@ public class application extends Application {
 			root_Main.prefWidthProperty().bind(root_Main.widthProperty());
 			root_Main.prefHeightProperty().bind(root_Main.heightProperty());
 			
+			FXMLLoader load_Profile = new FXMLLoader(getClass().getResource("Profile_Page.fxml"));
+			Pane root_Profile = load_Profile.load();
+			Scene scene_Profile = new Scene(root_Profile,600,400);
+			root_Profile.prefWidthProperty().bind(root_Profile.widthProperty());
+			root_Profile.prefHeightProperty().bind(root_Profile.heightProperty());
+			
 			
 					
 			controller loginLoader = (controller)Splash_Load.getController();
@@ -90,10 +96,17 @@ public class application extends Application {
 			controller6 mainLoader = (controller6)load_Main.getController();
 			mainLoader.setImage(root_Main);
 			mainLoader.setBox(root_Main);
+			mainLoader.setProfileScene(scene_Profile);
+			
+			controller7 profileLoader = (controller7)load_Profile.getController();
+			profileLoader.setImage(root_Profile);
+			profileLoader.setBox(root_Profile);
+			profileLoader.setMainScene(scene_Main);
+			
 			
 			primaryStage.setScene(scene_Splash);
 			primaryStage.show();
-		
+		} catch (Exception e) {System.out.println(e);};
 		
 	}
 	
