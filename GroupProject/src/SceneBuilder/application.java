@@ -16,7 +16,9 @@ import javafx.beans.binding.Bindings;
 public class application extends Application {
 	@Override
 	public void start(Stage primaryStage) throws Exception{
+
 		try {
+			
 			FXMLLoader load_Login = new FXMLLoader(getClass().getResource("Login_Page.fxml"));
 			Pane root_Login = load_Login.load();
 			Scene scene_Login = new Scene(root_Login,600,400);
@@ -61,11 +63,10 @@ public class application extends Application {
 			root_Profile.prefWidthProperty().bind(root_Profile.widthProperty());
 			root_Profile.prefHeightProperty().bind(root_Profile.heightProperty());
 			
-			
-					
 			controller loginLoader = (controller)Splash_Load.getController();
 			loginLoader.setLogin(scene_Login);
 			loginLoader.setImage(root_Splash);
+					
 			
 			controller2 signupLoader = (controller2)load_Login.getController();
 			signupLoader.setSignUpScene(scene_Signup);
@@ -85,6 +86,7 @@ public class application extends Application {
 			signupCont.setImage(root_Signup_Cont);
 			signupCont.comboBox1();
 			signupCont.comboBox2();
+			signupCont.setLogin(scene_Login);
 			
 			controller5 forgetPassword = (controller5)load_Forget.getController();
 			forgetPassword.setBox(root_Forget);
