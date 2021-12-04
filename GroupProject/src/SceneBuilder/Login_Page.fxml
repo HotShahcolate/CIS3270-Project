@@ -21,8 +21,8 @@
          <children>
             <VBox fx:id="login_box" alignment="CENTER" fillWidth="false" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="197.0" prefWidth="233.0" spacing="10.0">
                <children>
-                  <TextField prefHeight="25.0" prefWidth="239.0" promptText="Username" />
-                  <PasswordField prefHeight="25.0" prefWidth="241.0" promptText="Password" />
+                  <TextField fx:id="usernamefield" prefHeight="25.0" prefWidth="239.0" promptText="Username" />
+                  <PasswordField fx:id="passwordfield" prefHeight="25.0" prefWidth="241.0" promptText="Password" />
                   <Button fx:id="Login" mnemonicParsing="false" onAction="#openMain" prefHeight="25.0" prefWidth="238.0" text="Login" textAlignment="CENTER" />
                   <Text onMouseClicked="#openSignUp" strokeType="OUTSIDE" strokeWidth="0.0" text="Don't Have An Account? Signup" />
                   <Text onMouseClicked="#openForgetPassword" strokeType="OUTSIDE" strokeWidth="0.0" text="Forgot Your Password?" />

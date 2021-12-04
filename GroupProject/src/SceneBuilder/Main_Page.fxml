@@ -37,13 +37,13 @@
                <children>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="29.0" prefWidth="443.0" spacing="10.0">
                      <children>
-                        <ComboBox prefHeight="25.0" prefWidth="223.0" promptText="Leaving From" />
-                        <ComboBox prefHeight="25.0" prefWidth="223.0" promptText="Going To" />
+                        <ComboBox fx:id="leavinglist" prefHeight="25.0" prefWidth="223.0" promptText="Leaving From" />
+                        <ComboBox fx:id="goinglist" prefHeight="25.0" prefWidth="223.0" promptText="Going To" />
                      </children>
                   </HBox>
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="29.0" prefWidth="443.0" spacing="10.0">
                      <children>
-                        <ComboBox prefHeight="25.0" prefWidth="198.0" promptText="Departing" />
+                        <ComboBox fx:id="departinglist" prefHeight="25.0" prefWidth="198.0" promptText="Departing" />
                      </children>
                   </HBox>
                   <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="420.0">

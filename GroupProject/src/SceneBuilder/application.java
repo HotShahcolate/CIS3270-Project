@@ -12,6 +12,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.beans.binding.Bindings; 
 
+import db.Main;
+
 
 public class application extends Application {
 	@Override
@@ -113,7 +115,8 @@ public class application extends Application {
 	}
 	
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception{
+		Main.getConnection();
 		launch(args);
 	}
 }

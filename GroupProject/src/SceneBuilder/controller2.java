@@ -2,6 +2,9 @@ package SceneBuilder;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
@@ -14,17 +17,27 @@ import javafx.stage.Stage;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import code.Customer;
+import db.Main;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;  
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+
+import SceneBuilder.controller3;
 
 public class controller2 implements Initializable{
 	 private Scene signup;
 	 private Scene forgetPassword;
 	 private Scene main;
+	 
 	 @FXML private ImageView login_image;
 	 @FXML private StackPane stack_pane;
-	
+	 @FXML private TextField usernamefield;
+	 @FXML private PasswordField passwordfield;
+	 
+	 
 	 
 	 public void setSignUpScene (Scene scene1) {
 		 signup = scene1;
@@ -60,12 +73,20 @@ public class controller2 implements Initializable{
 	 }
 	 
 	 public void openMain(ActionEvent actionEvent) {
-	        Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
+		 Customer co = new Customer(usernamefield.getText(),passwordfield.getText());
+		 try {
+			Main.login(co);
+			Stage stage = (Stage)((Node)actionEvent.getSource()).getScene().getWindow();
 	        stage.setScene(main);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 
 	    }
-	 
-	 
-	 @Override
+	        
+
+	@Override
 	    public void initialize(URL url, ResourceBundle rb) {
 	        
 	    }    

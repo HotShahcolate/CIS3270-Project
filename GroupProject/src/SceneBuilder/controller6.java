@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;  
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -18,6 +20,15 @@ import javafx.fxml.Initializable;
 public class controller6 implements Initializable{
 	 @FXML private ImageView image;
 	 @FXML private StackPane stack_pane;
+	 
+	    @FXML
+	    private ComboBox departinglist;
+
+	    @FXML
+	    private ComboBox<?> goinglist;
+
+	    @FXML
+	    private ComboBox<?> leavinglist;
 	 
 	 private Scene profile;
 	 
@@ -42,7 +53,7 @@ public class controller6 implements Initializable{
 	 
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        departinglist.setItems(FXCollections.observableArrayList("dog","cat","pig"));
     }    
 
 }
