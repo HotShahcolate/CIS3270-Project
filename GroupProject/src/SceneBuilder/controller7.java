@@ -21,10 +21,12 @@ public class controller7 implements Initializable{
 	 
 	 private Scene main;
 	 
+	 
 	 public void setMainScene (Scene scene) {
 		 main = scene;
 	 }
 	 
+	 	 
 	 public void setImage (Pane root) {
 			image.fitWidthProperty().bind(root.widthProperty());
 			image.fitHeightProperty().bind(root.heightProperty());
@@ -39,6 +41,8 @@ public class controller7 implements Initializable{
 	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
 	        stage.setScene(main);
 	    }
+	 
+	 
 	 
 	@Override
     public void initialize(URL url, ResourceBundle rb) {

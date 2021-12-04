@@ -18,7 +18,7 @@ public class controller5 implements Initializable{
 	 @FXML private ImageView image;
 	 @FXML private StackPane stack_pane;
 	 @FXML private ComboBox<String> choice1;
-	 @FXML private ComboBox<String> choice2;
+	
 	 
 	 private Scene login;
 	 
@@ -28,12 +28,7 @@ public class controller5 implements Initializable{
 				 "What is the name of your high school?");
 	 }
 	 
-	 public void comboBox2 () {
-		 choice2.getItems().addAll ("What was the first company that you worked for?", 
-				 "What is the name of your favorite restaurant", 
-				 "What is the name of your middle school");
-	 }
-	 
+	 	 
 	
 	 public void setImage (Pane root) {
 			image.fitWidthProperty().bind(root.widthProperty());

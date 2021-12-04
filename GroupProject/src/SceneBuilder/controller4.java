@@ -18,7 +18,7 @@ public class controller4 implements Initializable{
 	 @FXML private ImageView image;
 	 @FXML private StackPane stack_pane;
 	 @FXML private ComboBox<String> choice1;
-	 @FXML private ComboBox<String> choice2;
+	 
 	 
 	 private Scene login;
 	 
@@ -32,12 +32,7 @@ public class controller4 implements Initializable{
 		 choice1.setValue("What is your mom's maiden name?");
 	 }
 	 
-	 public void comboBox2 () {
-		 choice2.getItems().addAll ("What was the first company that you worked for?", 
-				 "What is the name of your favorite restaurant", 
-				 "What is the name of your middle school");
-		 choice2.setValue("What was the first company that you worked for?");
-	 }
+	 
 	 
 	
 	 public void setImage (Pane root) {
