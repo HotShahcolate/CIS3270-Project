@@ -87,25 +87,25 @@ public class application extends Application {
 			signupCont.setBox(root_Signup_Cont);
 			signupCont.setImage(root_Signup_Cont);
 			signupCont.comboBox1();
-			signupCont.comboBox2();
 			signupCont.setLogin(scene_Login);
 			
 			controller5 forgetPassword = (controller5)load_Forget.getController();
 			forgetPassword.setBox(root_Forget);
 			forgetPassword.setImage(root_Forget);
 			forgetPassword.comboBox1();
-			forgetPassword.comboBox2();
 			forgetPassword.setLogin(scene_Login);
 			
 			controller6 mainLoader = (controller6)load_Main.getController();
 			mainLoader.setImage(root_Main);
 			mainLoader.setBox(root_Main);
 			mainLoader.setProfileScene(scene_Profile);
+			mainLoader.setLogin(scene_Login);
 			
 			controller7 profileLoader = (controller7)load_Profile.getController();
 			profileLoader.setImage(root_Profile);
 			profileLoader.setBox(root_Profile);
 			profileLoader.setMainScene(scene_Main);
+			
 			
 			
 			primaryStage.setScene(scene_Splash);

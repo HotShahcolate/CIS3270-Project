@@ -30,9 +30,6 @@
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question 1" />
                   <ComboBox fx:id="choice1" prefHeight="25.0" prefWidth="289.0" />
                   <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="289.0" />
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Security Question 2" />
-                  <ComboBox fx:id="choice2" prefHeight="25.0" prefWidth="286.0" />
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="285.0" />
                   <Button mnemonicParsing="false" onAction="#openLogin" text="Sign Up" />
                </children>
             </VBox>

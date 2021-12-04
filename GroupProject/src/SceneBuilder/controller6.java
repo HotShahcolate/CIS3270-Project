@@ -31,10 +31,20 @@ public class controller6 implements Initializable{
 	    private ComboBox<?> leavinglist;
 	 
 	 private Scene profile;
+	 private Scene login;
 	 
 	 public void setProfileScene (Scene scene) {
 		 profile = scene;
 	 }
+	 
+	 public void setLogin (Scene scene) {
+		 login = scene;
+	 }
+	 
+	 public void openLogin(MouseEvent event) {
+	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setScene(login);
+	    }
 	 
 	 public void setImage (Pane root) {
 			image.fitWidthProperty().bind(root.widthProperty());
