@@ -41,11 +41,7 @@ public class application extends Application {
 			root_Signup.prefHeightProperty().bind(root_Signup.heightProperty());
 			
 			
-			FXMLLoader load_Signup_Cont = new FXMLLoader(getClass().getResource("SignUp Cont.fxml"));
-			Pane root_Signup_Cont = load_Signup_Cont.load();
-			Scene scene_Signup_Cont = new Scene(root_Signup_Cont,600,400);
-			root_Signup_Cont.prefWidthProperty().bind(root_Signup_Cont.widthProperty());
-			root_Signup_Cont.prefHeightProperty().bind(root_Signup_Cont.heightProperty());
+			
 			
 			FXMLLoader load_Forget = new FXMLLoader(getClass().getResource("Forget_Password.fxml"));
 			Pane root_Forget = load_Forget.load();
@@ -79,15 +75,11 @@ public class application extends Application {
 			
 			
 			controller3 signupContLoader = (controller3)load_Signup.getController();
-			signupContLoader.setSignUp(scene_Signup_Cont);
+			signupContLoader.setSignUp(scene_Login);
 			signupContLoader.setImage(root_Signup);
 			signupContLoader.setBox(root_Signup);
 			
-			controller4 signupCont = (controller4)load_Signup_Cont.getController();
-			signupCont.setBox(root_Signup_Cont);
-			signupCont.setImage(root_Signup_Cont);
-			signupCont.comboBox1();
-			signupCont.setLogin(scene_Login);
+			
 			
 			controller5 forgetPassword = (controller5)load_Forget.getController();
 			forgetPassword.setBox(root_Forget);

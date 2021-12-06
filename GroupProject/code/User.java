@@ -1,6 +1,10 @@
 package code;
 
 abstract public class User {
+	// the use of private variables and their associated getters and setters is an example of ENCAPSULATION - 
+	// Encapsulation in Java is a concept where data is wrapped (variables) with code acting on the data (methods) 
+	// together as a single unit. In encapsulation, the variables of a class are hidden from other classes, and can be 
+	// accessed only through the methods of their current class. Therefore, it is also known as data hiding.
 	private int id;
 	private String username;
 	private String password;
@@ -78,6 +82,9 @@ abstract public class User {
 	public void setSsn(String ssn) {
 		this.ssn = ssn;
 	}
+	// the use of multiple constructors here is an example of POLYMORPHISM. This is also known as method overloading, or more specifically here,
+	// constructor overloading. POLYMORPHISM is the ability of an object to take on many forms. Here, the "User" object can be constructed in two 
+	// different ways. 
 	public User(int id, String username, String password, String firstname, String lastname, String address, String zip,
 			String state, String email, String answer, String ssn) {
 		super();
@@ -97,6 +104,9 @@ abstract public class User {
 		super();
 		this.username = username;
 		this.password = password;
+	}
+	public User() {
+		
 	}
 	
 }
