@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -43,6 +44,12 @@ public class controller5 implements Initializable{
 		 choice1.getItems().addAll ("What is your mother's maiden name?");
 	 }
 	 
+	 public void openMain(MouseEvent event) {
+	        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+	        stage.setScene(login);
+		 
+		
+	    }
 	 	 
 	
 	 public void setImage (Pane root) {

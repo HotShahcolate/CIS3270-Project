@@ -17,6 +17,7 @@ import java.util.ResourceBundle;
 
 import code.Customer;
 import code.Exceptions;
+import code.Flight;
 import db.Main;
 import SceneBuilder.controller2;
 import javafx.collections.FXCollections;
@@ -103,13 +104,12 @@ public class controller6 implements Initializable{
 	 
 	@Override
     public void initialize(URL url, ResourceBundle rb) {
+		
 		ResultSet flights;
 		ObservableList<String> flightsStrings = FXCollections.observableArrayList();
 		
 		ResultSet dates;
 		ObservableList<String> datesStrings = FXCollections.observableArrayList();
-		
-
 		
 		try {
 			flights = Main.loadMainMenuFlights();
@@ -138,17 +138,11 @@ public class controller6 implements Initializable{
 		else if(departingFlight.equals(goingToFlight)) {
 			error.setText("Error: departing flight location cannot be same as arriving location");
 			throw new code.Exceptions("Error: departing flight location cannot be same as arriving location");
-		}else if(dateConflict()) {
-			
 		}
 		error.setText("");
 	}
 	
-    private boolean dateConflict() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
+   
 	@FXML
     void addTrip(ActionEvent event) {
     	try {
@@ -157,16 +151,22 @@ public class controller6 implements Initializable{
 			Node node = (Node) event.getSource();
 			Stage stage = (Stage) node.getScene().getWindow();
 			Customer co = (Customer) stage.getUserData();
-			
-		} catch (Exceptions e) {
+			Flight fl = new Flight();
+			fl.setDate(departingDate);
+			fl.setFrom(departingFlight);
+			fl.setTo(goingToFlight);
+			//retrieve id for logged in user
+			co.setId(Main.retrieveCustomerID(co));
+			//retrieve id for selected flight
+			fl.setId(Main.retrieveFlightID(fl));
+			Main.bookFlight(co, fl);;
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			error.setText(e.getMessage());
 		}
     }
 	
-	public void saveUsername(String username) {
-		//co.setUsername(username);
-		your_trip.setText(username);
-	}
+
 
 }

@@ -2,6 +2,7 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.HBox?>
@@ -31,12 +32,14 @@
                         </Text>
                      </children>
                   </HBox>
+                  <Button mnemonicParsing="false" onAction="#loadTrips" text="Load Trips" />
+                  <Label fx:id="error" textFill="RED" />
                   <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="275.0">
                      <children>
-                        <ComboBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="25.0" prefWidth="321.0" />
+                        <ComboBox fx:id="bookedFlights" maxHeight="-Infinity" maxWidth="-Infinity" onAction="#selectedFlight" prefHeight="25.0" prefWidth="321.0" />
                      </children>
                   </HBox>
-                  <Button mnemonicParsing="false" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#deleteFlight" text="Delete" />
                   <Text fx:id="main_page" onMouseClicked="#openMain" strokeType="OUTSIDE" strokeWidth="0.0" text="Go back to main page" wrappingWidth="128.1367244720459" />
                </children>
             </VBox>
