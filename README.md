@@ -1,7 +1,7 @@
 # Journey Now
 Airline Reservation System
 
-Language - Java
+Language - Java and SQL
 
 ## Architecture
 
